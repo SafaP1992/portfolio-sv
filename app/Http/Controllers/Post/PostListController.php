@@ -15,7 +15,7 @@ class PostListController extends Controller
      */
     public function list()
     {
-        $posts = Post::all();
-        return response()->json(['data' => $posts]);
+        $posts = Post::paginate(10);
+        return view('admin.posts.list', compact('posts'));
     }
 }
