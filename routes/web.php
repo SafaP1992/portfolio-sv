@@ -17,11 +17,11 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', [MainController::class, 'index'])->name('dashbord');
+Route::get('/', [\App\Http\Controllers\MainController::class, 'index'])->name('dashbord');
 
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
-    Route::get('/', [MainController::class, 'index'])->name('dashbord');
-    
+    Route::get('/', [\App\Http\Controllers\AdminMainController::class, 'index'])->name('dashbord');
+
     Route::get('/post', [\App\Http\Controllers\Post\PostListController::class, 'list'])->name('post.list');
     // Route::get('/post/create', [\App\Http\Controllers\Post\PostCreateController::class, 'create'])->name('post.create');
     Route::post('/post/create', [\App\Http\Controllers\Post\PostStoreController::class, 'store'])->name('post.store');
