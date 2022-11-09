@@ -15,7 +15,6 @@ class PostStoreController extends Controller
 {
     public function store(Request $request)
     {
-        dd('$request->all()');
         // if ($request->user()->can('post-create')) {
             $post = new Post();
             if($file = $request->file('post_photo')){
@@ -33,17 +32,15 @@ class PostStoreController extends Controller
             $post->description = $request->input('description');
             $post->short_desc = $request->input('short_desc');
             $post->status = $request->input('status');
-            $post->type = $request->input('type');
             $post->meta_description = $request->input('meta_description');
             $post->meta_title = $request->input('meta_title');
             $post->meta_keywords = $request->input('meta_keyword');
             $post->user_id = Auth::id();
             $post->save();
-            // $post->categories()->sync($request->categories);
+
             Session::flash('add', 'مطلب با موفقیت ساخته شد');
-
-
-            return response()->json(['success' => $post]);
+            return redirect()->route('admin.post.list');
+            // return response()->json(['success' => $post]);
 
         // } else {
         //     return view('permission.index');

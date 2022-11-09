@@ -18,12 +18,13 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [\App\Http\Controllers\MainController::class, 'index'])->name('dashbord');
+Route::get('/post/{post}', [\App\Http\Controllers\PostViewController::class, 'show'])->name('post.show');
 
-Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
+Route::group([ 'prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::get('/', [\App\Http\Controllers\AdminMainController::class, 'index'])->name('dashbord');
 
     Route::get('/post', [\App\Http\Controllers\Post\PostListController::class, 'list'])->name('post.list');
-    // Route::get('/post/create', [\App\Http\Controllers\Post\PostCreateController::class, 'create'])->name('post.create');
+    Route::get('/post/create', [\App\Http\Controllers\Post\PostCreateController::class, 'create'])->name('post.create');
     Route::post('/post/create', [\App\Http\Controllers\Post\PostStoreController::class, 'store'])->name('post.store');
     Route::get('/post/edit/{post}', [\App\Http\Controllers\Post\PostEditController::class, 'edit'])->name('post.edit');
     Route::post('/post/edit/{post}', [\App\Http\Controllers\Post\PostUpdateController::class, 'update'])->name('post.update');

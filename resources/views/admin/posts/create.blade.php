@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('admin.layouts.master')
 
 @section('asset-css')
     <!-- Plugins css -->
@@ -10,7 +10,7 @@
 @endsection
 
 @section('breadcumb-title')
-    {{ __('titles.add_post') }}
+    Add Post
 @endsection
 
 @section('content')
@@ -28,7 +28,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="p-2">
-                                <form class="form-horizontal" role="form" method="POST" action="{{route('admin.post.store')}}">
+                                <form class="form-horizontal" role="form" method="POST" action="{{route('admin.post.store')}}" enctype="multipart/form-data">
                                     @csrf
 
                                     <div class="mb-2 row">
@@ -55,20 +55,6 @@
                                         @enderror
                                     </div>
 
-                                    <div class="mb-2 row">
-                                        <label class="col-md-2 col-form-label" for="categories">مادر دسته بندی</label>
-                                        <div class="col-md-10">
-                                            <select class="form-control category-select2" name="categories[]" multiple>
-                                                <option value="">بدون والد</option>
-                                                @foreach($categories as $category)
-                                                    <option value="{{$category->id}}">{{$category->title}}</option>
-                                                    @if (count($category->childrenRecursive) > 0)
-                                                        @include('admin.partials.categories', ['categories' => $category->childrenRecursive, 'level'=>1])
-                                                    @endif
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                    </div>
 
                                     <div class="mb-2 row">
                                         <label class="col-md-2 col-form-label" for="description">توضیحات</label>
@@ -82,16 +68,6 @@
                                         @enderror
                                     </div>
                                     
-                                    <div class="mb-2 row">
-                                        <label class="col-md-2 col-form-label" for="type">نوع</label>
-                                        <div class="col-md-10">
-                                            <select class="form-control category-select2" name="type">
-                                                <option value="0">بلاگ</option>
-                                                <option value="1">آموزشی</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
                                     <div class="mb-2 row">
                                         <label class="col-md-2 col-form-label" for="formFile">آپلود عکس</label>
                                         <div class="col-md-10">

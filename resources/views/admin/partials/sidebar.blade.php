@@ -3,7 +3,7 @@
 
     <!-- LOGO -->
     <div class="logo-box">
-        <a href="{{route('admin.dashbord')}}" class="logo logo-light text-center">
+        <a href="#" class="logo logo-light text-center">
             <span class="logo-sm">
                 <img src="{{asset('assets/images/logo.png')}}" height="24">
             </span>
@@ -69,10 +69,10 @@
                     <div class="collapse" id="sidebarDashboards">
                         <ul class="nav-second-level">
                             <li>
-                                <a href="{{route('admin.users.list')}}">{{ __('titles.list') }}</a>
+                                <a href="">{{ __('titles.list') }}</a>
                             </li>
                             <li>
-                                <a href="{{route('admin.user.create')}}">{{ __('titles.add') }}</a>
+                                <a href="">{{ __('titles.add') }}</a>
                             </li>
                         </ul>
                     </div>
@@ -90,10 +90,10 @@
                     <div class="collapse" id="sidebarDashboards1">
                         <ul class="nav-second-level">
                             <li>
-                                <a href="{{route('admin.category.list')}}">{{ __('titles.list') }}</a>
+                                <a href="">{{ __('titles.list') }}</a>
                             </li>
                             <li>
-                                <a href="{{route('admin.category.create')}}">{{ __('titles.add') }}</a>
+                                <a href="">{{ __('titles.add') }}</a>
                             </li>
                         </ul>
                     </div>
@@ -109,10 +109,10 @@
                     <div class="collapse" id="sidebarDashboards2">
                         <ul class="nav-second-level">
                             <li>
-                                <a href="{{route('admin.post.list')}}">{{ __('titles.list') }}</a>
+                                <a href="">{{ __('titles.list') }}</a>
                             </li>
                             <li>
-                                <a href="{{route('admin.post.create')}}">{{ __('titles.add') }}</a>
+                                <a href="">{{ __('titles.add') }}</a>
                             </li>
                         </ul>
                     </div>
@@ -130,10 +130,10 @@
                     <div class="collapse" id="sidebarCategoryProducts">
                         <ul class="nav-second-level">
                             <li>
-                                <a href="{{route('admin.categoryProduct.list')}}">{{ __('titles.list') }}</a>
+                                <a href="">{{ __('titles.list') }}</a>
                             </li>
                             <li>
-                                <a href="{{route('admin.categoryProduct.create')}}">{{ __('titles.add') }}</a>
+                                <a href="">{{ __('titles.add') }}</a>
                             </li>
                         </ul>
                     </div>
@@ -149,10 +149,10 @@
                     <div class="collapse" id="sidebarProducts">
                         <ul class="nav-second-level">
                             <li>
-                                <a href="{{route('admin.product.list')}}">{{ __('titles.list') }}</a>
+                                <a href="">{{ __('titles.list') }}</a>
                             </li>
                             <li>
-                                <a href="{{route('admin.product.create')}}">{{ __('titles.add') }}</a>
+                                <a href="">{{ __('titles.add') }}</a>
                             </li>
                         </ul>
                     </div>
@@ -169,10 +169,10 @@
                     <div class="collapse" id="sidebarMedia">
                         <ul class="nav-second-level">
                             <li>
-                                <a href="{{route('admin.media.list')}}">{{ __('titles.list') }}</a>
+                                <a href="">{{ __('titles.list') }}</a>
                             </li>
                             <li>
-                                <a href="{{route('admin.media.create')}}">{{ __('titles.add') }}</a>
+                                <a href="">{{ __('titles.add') }}</a>
                             </li>
                         </ul>
                     </div>

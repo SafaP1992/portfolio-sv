@@ -1,7 +1,7 @@
-@extends('layouts.master')
+@extends('admin.layouts.master')
 
 @section('breadcumb-title')
-    {{ __('titles.posts') }}
+    List
 @endsection
 
 @section('content')
@@ -26,9 +26,6 @@
                                 <th>نویسنده</th>
                                 <th>توضیحات</th>
                                 <th>وضعیت</th>
-                                <th>نوع</th>
-                                <th>تاریخ ایجاد</th>
-                                <th>تعداد بازدید</th>
                                 <th>عملیات</th>
                             </tr>
                         </thead>
@@ -42,16 +39,13 @@
                                         <td><img src="{{ asset('assets/images/users/avatar-2.jpg') }}" class="img-thumb rounded shadow" /></td>
                                     @endif
                                     <td><a href="{{ route('admin.post.edit', $post) }}">{{ $post->title }}</a></td>
-                                    <td>{{ $post->user->name }}</td>
+                                    <td>{{ $post->user?->name }}</td>
                                     <td>{{ Str::limit($post->short_desc, 50)  }}</td>
                                     @if ($post->status == 0)
                                         <td><span class="badge badge-danger">عدم انتشار</span></td>
                                     @else
                                         <td><span class="badge badge-success">انتشار</span></td>
                                     @endif
-                                    <td>{{ $post->type() }}</td>
-                                    <td>{{ Hekmatinasser\Verta\Verta::instance($post->created_at)->format('%d %B، %Y - ساعت: H:i') }}</td>
-                                    <td>{{ $post->vzt()->count(); }}</td>
 
                                     <td>
                                         <a href="{{route('admin.post.edit', $post)}}" class="btn btn-danger rounded">

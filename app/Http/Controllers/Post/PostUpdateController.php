@@ -31,7 +31,6 @@ class PostUpdateController extends Controller
             $post->description = $request->input('description');
             $post->short_desc = $request->input('short_desc');
             $post->status = $request->input('status');
-            $post->type = $request->input('type');
             $post->meta_description = $request->input('meta_description');
             $post->meta_title = $request->input('meta_title');
             $post->meta_keywords = $request->input('meta_keyword');
