@@ -52,13 +52,13 @@
                                     </div>
                                 </div>
                                 <div class="mobile-button"><span></span></div><!-- /.mobile-button -->
-                                <nav id="main-nav" class="main-nav">
+                                {{-- <nav id="main-nav" class="main-nav">
                                     <ul id="menu-primary-menu" class="menu">
                                         <li class="menu-item current-menu-item">
                                             <a href="{{route('dashbord')}}">Home</a>
                                         </li>
     
-                                        {{-- <li class="menu-item ">
+                                        <li class="menu-item ">
                                             <a data-scroll href="#about">About</a>                                       
                                         </li>
     
@@ -68,15 +68,15 @@
     
                                         <li class="menu-item">
                                             <a data-scroll href="#contact">Contact</a>                                        
-                                        </li> --}}
+                                        </li>
                                     </ul>
-                                </nav><!-- /#main-nav -->                        
+                                </nav><!-- /#main-nav -->                         --}}
                             </div> 
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="mode_switcher ">
+            <div class="mode_switcher" style="right: 15px">
                 <a href="#" class="light is_active">
                     <img src="assets/images/icon/sun.png" alt="">
                 </a>

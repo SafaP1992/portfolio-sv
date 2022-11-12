@@ -15,12 +15,15 @@ class PostStoreController extends Controller
 {
     public function store(Request $request)
     {
+        // dd($request->all());
         // if ($request->user()->can('post-create')) {
             $post = new Post();
             if($file = $request->file('post_photo')){
                 $s = Storage::disk('local')->put('public/Blogs', $file);
                 $photo = new Media();
                 $photo->name = $file->getClientOriginalName();
+                $photo->title = $file->getClientOriginalName();
+                $photo->type = $file->getClientMimeType();
                 $photo->path = $s;
                 $photo->user_id = Auth::id();
                 $photo->save();

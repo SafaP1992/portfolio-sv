@@ -3,45 +3,33 @@
 
 @section('content')
 
-<section class="flat-blog-sidebar flat-blog-details">
-    <div class="themes-container">
-        <div class="row">
-            <div class="col-lg-12">
-                <article class="article">
+
+    <!-- blog details -->
+    <section class="flat-blog-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="post">
-                        <div class="heading-post center">
+                        <div class="heading-post">
                             {{-- <h6 class="text-u text-color-3 ls-01">TRENDS</h6>                                                                 --}}
                             <h2 class="text-t">{{$post->title}}</h2>
-                            {{-- <div class="box-meta flex-three">
+                            <div class="box-meta flex-three">
                                 <img src="assets/images/blog/avatar-blog.jpg" alt=""> 
-                                <div class="meta texts-p"> by <a href="#" class="user">Themesflat </a>  <a href="#" class="">August 13, 2022</a> </div> 
-                            </div> --}}
-                        </div> 
-                        <div class="image-one text-center">
-                            <img src="/assets/images/2.jpg" alt="" class="rounded text-center" width="420"> 
-                        </div>   
-                        <div class="box-text style-1">
-                            <p>{{$post->description}}</p>
+                                {{-- <div class="meta texts-p"> by <a href="#" class="user">Themesflat </a>  <a href="#" class="">August 13, 2022</a> </div>  --}}
+                            </div>
                         </div>
-                        {{-- <div class="image-box flex-one">
-                            <img class="img-1" src="assets/images/blog/blog-deatils-sidebar-2.jpg" alt=""> 
-                            <img class="img-2" src="assets/images/blog/blog-deatils-sidebar-3.jpg" alt=""> 
-                        </div>
-                        <h2 class="title-bl text-t">We design industry materials of innovation</h2>
-                        <div class="box-text style-2">
-                            <p class="text-one p-18">Thus it is well-known that email ranks as one of the most cost-effective as well as best conversion providing lead generation 
-                                tactics in B2B. Before loading up a number of messages into the inbox of the prospect, it is essential to encourage and support the different leads 
-                                in the funnel at this stage.</p> 
-                            <p class="p-18">As a midway answer to these two answers, there was a third opinion about “Lead Qualification” that revealed a new aspect. Though many 
-                                respondents might show interest in buying, there are very few who would really want to buy at that specific point in time.</p>   
-                        </div>  
+                        <p>
+                            {{$post->description}}
+                        </p>
+
+                        
                         <div class="box-item flex-two">
                             <div class="tags flex-three ">
                                 <h5 class="title-tag fs-16 fw-7">Tags:</h5>
                                 <div class="flex fs-16 fw-6 link-style-2">
-                                    <a href="#">Desgin</a>
-                                    <a href="#"> Development</a>
-                                    <a href="#"> Template</a>
+                                    <a href="#">Fashion</a>
+                                    <a href="#"> Trending</a>
+                                    <a href="#"> Summer</a>
                                 </div>                                         
                             </div> 
                             <div class="share flex-three ">
@@ -53,14 +41,22 @@
                                     <a href="#"><i class="fab fa-youtube"></i></a>                                         
                                 </div>
                             </div>
-                        </div> --}}
-                        
+                        </div>
+                        <div class="button-pagination flex-one">
+                            <div class="inner inner-1">
+                                <div class="btn-pagi text-u link-style-2"><a href="#" >Previous</a></div>
+                                <h4 class="fs-16"><a href="#">I Couldn’t Help But Splurge On These Epic Fall Finds</a> </h4>
+                            </div>
+                            <div class="inner inner-2">
+                                <div class="btn-pagi text-u link-style-2"><a href="#" >Next</a></div>
+                                <h4 class="fs-16"><a href="#">My Mani Photo Dump To Save To Your Nail Inspo Folder</a></h4>
+                            </div>                                      
+                        </div>                                                                                
                     </div>                        
-                </article>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     
 

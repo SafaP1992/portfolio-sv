@@ -20,6 +20,8 @@ class PostUpdateController extends Controller
                 $s = Storage::disk('local')->put('public/Blogs', $file);
                 $photo = new Media();
                 $photo->name = $file->getClientOriginalName();
+                $photo->title = $file->getClientOriginalName();
+                $photo->type = $file->getClientMimeType();
                 $photo->path = $s;
                 $photo->user_id = Auth::id();
                 $photo->save();

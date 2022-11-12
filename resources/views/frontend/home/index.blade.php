@@ -21,7 +21,7 @@
 
                                     <div class="box-portflio hover-img">
                                         <div class="image img-style">
-                                            <img class="img-item" src="assets/images/2.jpg" alt="">
+                                            <img class="img-item" src="{{asset(Storage::url($post->photo->path))}}" alt="">
                                         </div>
                                         <div class="post">
                                             <a href="#"><h4>{{$post->title}}</h4></a>

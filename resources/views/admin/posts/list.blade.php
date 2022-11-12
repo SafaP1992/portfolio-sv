@@ -34,9 +34,9 @@
                                 <tr>
                                     <td>{{$key+1}}</td>
                                     @if ($post->photo_id)
-                                        <td><img src="{{asset(Storage::url($post->photo->path))}}" class="img-fluid img-thumb rounded shadow"/></td>
+                                        <td><img src="{{asset(Storage::url($post->photo->path))}}" class="img-fluid img-thumb rounded shadow" width="170px"/></td>
                                     @else
-                                        <td><img src="{{ asset('assets/images/users/avatar-2.jpg') }}" class="img-thumb rounded shadow" /></td>
+                                        <td><img src="{{ asset('assets/images/users/avatar-2.jpg') }}" class="img-thumb rounded shadow" width="170px"/></td>
                                     @endif
                                     <td><a href="{{ route('admin.post.edit', $post) }}">{{ $post->title }}</a></td>
                                     <td>{{ $post->user?->name }}</td>
